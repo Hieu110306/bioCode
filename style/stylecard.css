@@ -1,0 +1,51 @@
+.card {
+  width: 220px;
+  height: 220px;
+  perspective: 1000px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background : url("../image/tenor.gif");
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #e4d5e6;
+  font-size: 24px;
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  background : url("../image/avt.jpeg");
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ebe0dc;
+  font-size: 24px;
+  transform: rotateY(180deg);
+}

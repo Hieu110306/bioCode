@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+}
+
+#game {
+    width: 400px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    background: skyblue;
+    border: 3px solid white;
+}
+
+#bird {
+    position: absolute;
+    left: 80px;
+    top: 250px;
+    width: 45px;
+    height: 45px;
+    font-size: 40px;
+    z-index: 10;
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    z-index: 20;
+}
+
+.pipe {
+    position: absolute;
+    width: 60px;
+    background: green;
+    border: 3px solid darkgreen;
+}
+
+#gameOver {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    padding: 25px;
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    z-index: 30;
+}
+
+#gameOver button {
+    margin-top: 15px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    background: green;
+    color: white;
+    cursor: pointer;
+}
